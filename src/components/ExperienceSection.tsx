@@ -119,10 +119,10 @@ export const ExperienceSection: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Date Placeholder Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-mono text-xs">
-                    <Calendar className="w-3.5 h-3.5 text-amber-400" />
-                    <span>{item.periodPlaceholder}</span>
+                  {/* Period Badge */}
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 font-mono text-xs">
+                    <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>{item.period}</span>
                   </div>
                 </div>
 

@@ -190,7 +190,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </button>
             </div>
 
-            {/* Social Links & Placeholder Indicator */}
+            {/* Social Links */}
             <div className="pt-4 flex flex-wrap items-center gap-5 text-xs text-slate-400">
               <a
                 href={PERSONAL_INFO.githubUrl}
@@ -201,12 +201,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span className="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-cyan-500/40">
                   <Github className="w-4 h-4 text-cyan-400" />
                 </span>
-                <span className="font-mono">
-                  GitHub{' '}
-                  <span className="text-[11px] text-amber-300/90 bg-amber-500/10 border border-amber-500/20 px-1.5 py-0.5 rounded ml-1">
-                    Placeholder
-                  </span>
-                </span>
+                <span className="font-mono">{PERSONAL_INFO.githubDisplay}</span>
               </a>
 
               <a
@@ -218,12 +213,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span className="p-2 rounded-lg bg-slate-900 border border-slate-800 group-hover:border-cyan-500/40">
                   <Linkedin className="w-4 h-4 text-blue-400" />
                 </span>
-                <span className="font-mono">
-                  LinkedIn{' '}
-                  <span className="text-[11px] text-amber-300/90 bg-amber-500/10 border border-amber-500/20 px-1.5 py-0.5 rounded ml-1">
-                    Placeholder
-                  </span>
-                </span>
+                <span className="font-mono">{PERSONAL_INFO.linkedinDisplay}</span>
               </a>
             </div>
           </motion.div>

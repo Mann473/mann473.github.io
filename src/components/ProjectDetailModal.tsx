@@ -8,9 +8,7 @@ import {
   CheckCircle2,
   AlertCircle,
   Cpu,
-  Image as ImageIcon,
   Wrench,
-  FileCode2,
   ArrowRight,
 } from 'lucide-react';
 import { ProjectItem } from '../types/portfolio';
@@ -107,7 +105,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                     </p>
                   </div>
 
-                  {/* Repository & Live Demo Links with Clear Placeholder Indicators */}
+                  {/* Repository & Optional Live Demo Links */}
                   <div className="flex flex-wrap items-center gap-3">
                     <a
                       href={project.githubUrl}
@@ -116,28 +114,20 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                       className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-medium bg-slate-900 hover:bg-slate-800 text-slate-100 border border-slate-700 hover:border-cyan-400/50 transition-all"
                     >
                       <Github className="w-4 h-4 text-cyan-400" />
-                      <span>GitHub Repository</span>
-                      {project.isGithubPlaceholder && (
-                        <span className="px-1.5 py-0.5 rounded text-[10px] bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                          Placeholder
-                        </span>
-                      )}
+                      <span>View on GitHub</span>
                     </a>
 
-                    <a
-                      href={project.liveDemoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 hover:from-cyan-300 hover:to-blue-300 transition-all"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>Live Demo</span>
-                      {project.isLiveDemoPlaceholder && (
-                        <span className="px-1.5 py-0.5 rounded text-[10px] bg-slate-950/80 text-amber-300">
-                          Placeholder
-                        </span>
-                      )}
-                    </a>
+                    {project.liveDemoUrl && (
+                      <a
+                        href={project.liveDemoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 hover:from-cyan-300 hover:to-blue-300 transition-all"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -257,11 +247,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                       </span>
                     ))}
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed pt-2">
-                    Want to add or update technologies as this project evolves? Edit the{' '}
-                    <code className="text-cyan-300 font-mono">technologies</code> array
-                    in <code className="text-cyan-300 font-mono">portfolioData.ts</code>.
-                  </p>
                 </div>
 
                 {/* Key Features */}
@@ -302,42 +287,6 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                       <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                         {challenge.detail}
                       </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Screenshots Section (Honest, Clearly Identifiable Placeholders) */}
-              <div className="p-6 rounded-2xl bg-slate-900/40 border border-dashed border-slate-700/90 space-y-4">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-300">
-                    <ImageIcon className="w-4 h-4 text-amber-400" />
-                    <span>Project Screenshots Section (Placeholders Ready for Your Captures)</span>
-                  </div>
-                  <span className="font-mono text-[11px] text-slate-400">
-                    Drop images in /public/screenshots/
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {project.screenshotPlaceholders.map((shot) => (
-                    <div
-                      key={shot.title}
-                      className="p-5 rounded-xl bg-slate-950/85 border border-slate-800 flex flex-col justify-between min-h-[170px] bg-dot-matrix"
-                    >
-                      <div className="flex items-center justify-between text-xs font-mono text-slate-400">
-                        <span className="text-cyan-300">{shot.title}</span>
-                        <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-[10px]">
-                          {shot.aspectNote}
-                        </span>
-                      </div>
-                      <div className="my-4 p-3 rounded-lg bg-amber-500/10 border border-amber-500/25 text-xs font-mono text-amber-200/90">
-                        {shot.caption}
-                      </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-500">
-                        <FileCode2 className="w-3.5 h-3.5 text-cyan-400" />
-                        <span>Update in src/data/portfolioData.ts</span>
-                      </div>
                     </div>
                   ))}
                 </div>

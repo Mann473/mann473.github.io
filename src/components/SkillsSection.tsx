@@ -46,11 +46,8 @@ export const SkillsSection: React.FC = () => {
             </h2>
             <p className="mt-3 text-slate-400 text-base">
               Organized by domain and grounded in hands-on academic and personal project
-              implementation. Easily editable in{' '}
-              <code className="text-xs font-mono text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
-                src/data/portfolioData.ts
-              </code>
-              .
+              implementation across artificial intelligence, data engineering, and
+              full-stack software development.
             </p>
           </div>
 

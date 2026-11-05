@@ -127,8 +127,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResumeModal }) => {
             href={PERSONAL_INFO.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub Profile (Placeholder)"
-            title="GitHub Profile (Update URL in portfolioData.ts)"
+            aria-label="GitHub Profile"
+            title="GitHub Profile"
             className="p-2 rounded-lg text-slate-400 hover:text-cyan-300 hover:bg-slate-800/60 border border-transparent hover:border-slate-700 transition-all"
           >
             <Github className="w-4 h-4" />
@@ -137,8 +137,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResumeModal }) => {
             href={PERSONAL_INFO.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn Profile (Placeholder)"
-            title="LinkedIn Profile (Update URL in portfolioData.ts)"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
             className="p-2 rounded-lg text-slate-400 hover:text-cyan-300 hover:bg-slate-800/60 border border-transparent hover:border-slate-700 transition-all"
           >
             <Linkedin className="w-4 h-4" />

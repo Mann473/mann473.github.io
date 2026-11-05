@@ -6,7 +6,7 @@ import {
   Calendar,
   BookOpen,
   CheckCircle2,
-  FileCode2,
+  Award,
 } from 'lucide-react';
 import { EDUCATION_DATA } from '../data/portfolioData';
 
@@ -47,11 +47,15 @@ export const EducationSection: React.FC = () => {
                 </div>
                 <div>
                   <span className="font-mono text-xs uppercase tracking-widest text-cyan-400 block">
-                    UNDERGRADUATE DEGREE
+                    HONORS UNDERGRADUATE DEGREE
                   </span>
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-white">
                     {EDUCATION_DATA.degree}
                   </h3>
+                  <p className="text-sm font-medium text-cyan-200/90 mt-0.5 flex items-center gap-1.5">
+                    <Award className="w-4 h-4 text-cyan-400" />
+                    <span>{EDUCATION_DATA.minors}</span>
+                  </p>
                 </div>
               </div>
 
@@ -63,9 +67,9 @@ export const EducationSection: React.FC = () => {
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   {EDUCATION_DATA.location}
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-200 font-mono text-xs">
-                  <Calendar className="w-3.5 h-3.5 text-amber-400" />
-                  {EDUCATION_DATA.graduationDatePlaceholder}
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 font-mono text-xs">
+                  <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                  {EDUCATION_DATA.graduationDate}
                 </span>
               </div>
 
@@ -92,38 +96,34 @@ export const EducationSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Column: Editable Placeholders for Specific Coursework / Capstone / Details */}
-            <div className="lg:col-span-5 p-6 rounded-2xl bg-slate-950/85 border border-dashed border-slate-700/90 space-y-4">
+            {/* Right Column: Relevant Coursework */}
+            <div className="lg:col-span-5 p-6 rounded-2xl bg-slate-950/85 border border-slate-800/90 space-y-4">
               <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-amber-300">
-                  <BookOpen className="w-4 h-4 text-amber-400" />
-                  Relevant Coursework &amp; Details
+                <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-cyan-300">
+                  <BookOpen className="w-4 h-4 text-cyan-400" />
+                  Relevant Coursework
                 </span>
-                <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/25">
-                  Placeholders
+                <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
+                  Brock University
                 </span>
               </div>
 
               <p className="text-xs text-slate-400 leading-relaxed">
-                Ready for your specific Brock University course codes, capstone project
-                details, or graduation date:
+                Key computer science and systems engineering coursework completed during
+                my B.Sc. (Honors) program:
               </p>
 
               <ul className="space-y-2.5">
-                {EDUCATION_DATA.courseworkPlaceholders.map((item, i) => (
+                {EDUCATION_DATA.relevantCoursework.map((course) => (
                   <li
-                    key={i}
-                    className="p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs font-mono text-slate-300"
+                    key={course}
+                    className="p-3 rounded-xl bg-slate-900/70 border border-slate-800/90 text-xs font-mono text-slate-200 flex items-center gap-2.5"
                   >
-                    {item}
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                    <span>{course}</span>
                   </li>
                 ))}
               </ul>
-
-              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-slate-500">
-                <FileCode2 className="w-3.5 h-3.5 text-cyan-400" />
-                <span>Update EDUCATION_DATA in src/data/portfolioData.ts</span>
-              </div>
             </div>
           </div>
         </motion.div>

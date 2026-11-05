@@ -27,7 +27,6 @@ export const ContactSection: React.FC = () => {
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2500);
     } catch {
-      // Fallback if clipboard permission is restricted
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2500);
     }
@@ -66,7 +65,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Direct Channels (Email, LinkedIn, GitHub Placeholders) */}
+          {/* Left Column: Direct Channels (Email, LinkedIn, GitHub) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -90,11 +89,6 @@ export const ContactSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                {PERSONAL_INFO.isEmailPlaceholder && (
-                  <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/25">
-                    Placeholder
-                  </span>
-                )}
               </div>
 
               <div className="flex items-center gap-2 pt-1">
@@ -146,14 +140,7 @@ export const ContactSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  {PERSONAL_INFO.isLinkedinPlaceholder && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/25">
-                      Placeholder
-                    </span>
-                  )}
-                  <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-300" />
-                </div>
+                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-300" />
               </div>
             </a>
 
@@ -178,14 +165,7 @@ export const ContactSection: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  {PERSONAL_INFO.isGithubPlaceholder && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/25">
-                      Placeholder
-                    </span>
-                  )}
-                  <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-300" />
-                </div>
+                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-300" />
               </div>
             </a>
 
@@ -193,7 +173,7 @@ export const ContactSection: React.FC = () => {
             <div className="p-5 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-slate-900/80 to-blue-500/10 border border-cyan-500/25 space-y-2">
               <div className="flex items-center gap-2 text-xs font-mono text-cyan-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>Based in Canada • Brock University CS Graduate</span>
+                <span>St. Catharines, ON • Brock University CS Graduate</span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                 Thank you for taking the time to explore my engineering portfolio and
@@ -264,7 +244,7 @@ export const ContactSection: React.FC = () => {
               <div>
                 <label
                   htmlFor="contact-subject"
-                  className="block font-mono text-xs text-slate-300 mb-1.5"
+                    className="block font-mono text-xs text-slate-300 mb-1.5"
                 >
                   Subject
                 </label>
@@ -298,7 +278,7 @@ export const ContactSection: React.FC = () => {
 
               <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
                 <p className="text-xs font-mono text-slate-400">
-                  Opens your default mail client pre-addressed to Mann.
+                  Opens your default mail client addressed to {PERSONAL_INFO.email}
                 </p>
                 <button
                   type="submit"
@@ -311,8 +291,8 @@ export const ContactSection: React.FC = () => {
 
               {formSubmittedNote && (
                 <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs font-mono text-emerald-300">
-                  Mail client launched! Remember to replace the placeholder email address in{' '}
-                  <code>src/data/portfolioData.ts</code> before publishing.
+                  Mail client launched! You can also reach Mann directly at{' '}
+                  {PERSONAL_INFO.email}.
                 </div>
               )}
             </form>

@@ -1,7 +1,5 @@
 /**
  * Core TypeScript definitions for Mann Patel's Portfolio.
- * Keeping data types centralized makes updating projects, skills, and experience
- * type-safe and straightforward.
  */
 
 export type ProjectCategory = 'All' | 'AI & ML' | 'Full-Stack' | 'Automation';
@@ -36,15 +34,8 @@ export interface ProjectItem {
     label: string;
     value: string;
   }[];
-  screenshotPlaceholders: {
-    title: string;
-    caption: string;
-    aspectNote: string;
-  }[];
-  githubUrl: string; // Use placeholder token when not yet published
-  liveDemoUrl: string; // Use placeholder token when not yet deployed
-  isGithubPlaceholder: boolean;
-  isLiveDemoPlaceholder: boolean;
+  githubUrl: string;
+  liveDemoUrl?: string;
   accentColor: 'cyan' | 'blue' | 'violet' | 'emerald' | 'amber';
 }
 
@@ -69,8 +60,7 @@ export interface ExperienceRole {
   company: string;
   departmentOrNote?: string;
   location: string;
-  periodPlaceholder: string;
-  isPlaceholderDate: boolean;
+  period: string;
   summary: string;
   transferableSkills: string[];
   highlights: string[];
@@ -79,10 +69,10 @@ export interface ExperienceRole {
 export interface EducationInfo {
   institution: string;
   degree: string;
+  minors: string;
   location: string;
-  graduationDatePlaceholder: string;
-  isPlaceholderDate: boolean;
+  graduationDate: string;
   summary: string;
   focusAreas: string[];
-  courseworkPlaceholders: string[];
+  relevantCoursework: string[];
 }

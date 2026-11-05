@@ -7,11 +7,8 @@ import {
 
 /**
  * ============================================================================
- * PERSONALIZED CONFIGURATION & PLACEHOLDERS FOR MANN PATEL
+ * PERSONALIZED CONFIGURATION FOR MANN PATEL
  * ============================================================================
- * Every placeholder in this file is clearly marked with `[PLACEHOLDER: ...]`
- * or `isPlaceholder*` flags so you can update your URLs, dates, and resume path
- * in one place without digging through UI components.
  */
 
 export const PERSONAL_INFO = {
@@ -19,26 +16,17 @@ export const PERSONAL_INFO = {
   headline: 'Computer Science Graduate | Aspiring AI Engineer | Software Developer',
   tagline:
     'Building practical software solutions at the intersection of artificial intelligence, automation, and technology.',
-  location: 'Canada',
-  educationShort: 'Bachelor of Computer Science, Brock University',
+  location: 'St. Catharines, ON, Canada',
+  educationShort:
+    'B.Sc. (Honors) in Computer Science (Minors in Business & Management), Brock University',
   statusText: 'Open to Software Engineering & AI Engineering Opportunities',
 
-  // ==========================================================================
-  // CONTACT & SOCIAL PLACEHOLDERS — Update these with your real links
-  // ==========================================================================
-  email: 'mann.patel@example.com', // [PLACEHOLDER: Replace with your personal email]
-  isEmailPlaceholder: true,
-
+  email: 'patelmann6@gmail.com',
   githubUrl: 'https://github.com/Mann473',
   githubDisplay: 'github.com/Mann473',
-  isGithubPlaceholder: false,
-
-  linkedinUrl: 'https://linkedin.com/in/YOUR_LINKEDIN_HANDLE', // [PLACEHOLDER: Replace with your LinkedIn profile URL]
-  linkedinDisplay: 'linkedin.com/in/[YOUR_HANDLE]',
-  isLinkedinPlaceholder: true,
-
-  resumeUrl: './Mann_Patel_Resume_Placeholder.pdf', // [PLACEHOLDER: Add your PDF to /public and update filename]
-  isResumePlaceholder: true,
+  linkedinUrl: 'https://www.linkedin.com/in/mann473/',
+  linkedinDisplay: 'linkedin.com/in/mann473',
+  resumeUrl: './Mann_Patel_Resume.pdf',
 };
 
 export const CAREER_INTERESTS = [
@@ -75,24 +63,24 @@ export const CAREER_INTERESTS = [
 ];
 
 export const ABOUT_CONTENT = {
-  lead: 'I am a Computer Science graduate from Brock University in Canada with a strong focus on building practical software systems across artificial intelligence, machine learning, and full-stack application development.',
+  lead: 'I am a Computer Science graduate (B.Sc. Honors with Minors in Business and Management) from Brock University in St. Catharines, Ontario, focused on building practical software systems across artificial intelligence, machine learning, and full-stack application development.',
   paragraphs: [
-    'My approach to software engineering centers on solving real, tangible problems. Whether designing a financial transaction risk copilot with human-in-the-loop audit trails, training convolutional neural networks for image classification, or building full-stack applications for everyday expense tracking, I enjoy turning complex requirements into clean, working software.',
+    'My approach to software engineering centers on solving real, tangible problems. Whether designing a financial transaction risk copilot with human-in-the-loop audit trails, training convolutional neural networks for image classification, or building full-stack applications for everyday expense tracking and workflow automation, I enjoy turning complex requirements into clean, working software.',
     'Currently, I am actively strengthening my core software engineering and programming fundamentals in Python, Java, and SQL while building hands-on projects involving LLM integration, intelligent automation, and modern application architecture.',
-    'Alongside my technical background, my experience in retail leadership and operations at Best Buy Canada has shaped how I communicate with stakeholders, troubleshoot under pressure, collaborate across teams, and keep end users at the center of every technical decision.',
+    'Alongside my technical background, my leadership experience at Best Buy Canada has shaped how I communicate with stakeholders, troubleshoot under pressure, develop teams, and keep end users at the center of every technical decision.',
   ],
   quickFacts: [
     {
       label: 'Education',
-      value: 'B.Sc. Computer Science — Brock University, Canada',
+      value: 'B.Sc. (Honors) Computer Science — Brock University',
+    },
+    {
+      label: 'Minors',
+      value: 'Business and Management',
     },
     {
       label: 'Core Languages',
-      value: 'Python, Java, SQL',
-    },
-    {
-      label: 'Primary Focus',
-      value: 'AI Engineering, Software Engineering & Practical Automation',
+      value: 'Python, Java, SQL, TypeScript / JavaScript',
     },
     {
       label: 'Engineering Philosophy',
@@ -102,9 +90,7 @@ export const ABOUT_CONTENT = {
 };
 
 /**
- * Technical Skills grouped into categories as requested.
- * Note: Framed authentically around practical project application and foundational growth
- * without implying inflated or fabricated "expert" percentages.
+ * Technical Skills grouped into categories.
  */
 export const SKILL_GROUPS: SkillGroup[] = [
   {
@@ -116,17 +102,17 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       {
         name: 'Python',
-        context: 'Machine learning pipelines, LLM integration, automation scripts & Streamlit apps',
+        context: 'Machine learning pipelines, TensorFlow/Keras, scikit-learn, pandas, NumPy, OpenCV & automation',
         focusTag: 'Primary Language',
       },
       {
         name: 'Java',
-        context: 'Object-oriented programming, data structures, and software engineering fundamentals',
+        context: 'Object-oriented programming, advanced data structures, algorithms & software engineering',
         focusTag: 'Core CS & OOP',
       },
       {
         name: 'SQL',
-        context: 'Relational schema design, querying, audit logging, and data persistence',
+        context: 'Relational schema design, DBMS querying, audit logging, and persistent data storage',
         focusTag: 'Data & Queries',
       },
     ],
@@ -140,28 +126,28 @@ export const SKILL_GROUPS: SkillGroup[] = [
     skills: [
       {
         name: 'Machine Learning',
-        context: 'Anomaly detection (Isolation Forest), feature preprocessing & model evaluation with Scikit-learn',
+        context: 'Anomaly detection (Isolation Forest), feature preprocessing & predictive modeling with scikit-learn',
         focusTag: 'Applied ML',
       },
       {
         name: 'Deep Learning',
-        context: 'Neural network training, transfer learning, and evaluation workflows in TensorFlow',
+        context: 'Neural network training, Dropout, Batch Normalization & hyperparameter tuning in TensorFlow/Keras',
         focusTag: 'Neural Nets',
       },
       {
         name: 'CNNs',
-        context: 'Convolutional architectures & VGG16 transfer learning for large-scale image classification',
+        context: 'Custom Convolutional Neural Networks & transfer learning (VGG16, ResNet) on 20,000+ images',
         focusTag: 'Computer Vision',
       },
       {
         name: 'Recommendation Systems',
-        context: 'Collaborative filtering & content-based filtering pipelines for personalized discovery',
+        context: 'Collaborative filtering & content-based filtering pipelines for personalized e-commerce discovery',
         focusTag: 'Personalization',
       },
       {
         name: 'LLM Integration',
-        context: 'Local LLM inference with Ollama for contextual risk explanations & copilot interfaces',
-        focusTag: 'GenAI / Ollama',
+        context: 'Local LLM inference with Ollama & NLP workflows for contextual risk explanations and automation',
+        focusTag: 'GenAI / NLP',
       },
     ],
   },
@@ -179,7 +165,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       },
       {
         name: 'GitHub',
-        context: 'Repository management, code collaboration, and project documentation',
+        context: 'Repository management, GitHub Actions workflows, and code collaboration',
         focusTag: 'Collaboration',
       },
       {
@@ -189,17 +175,17 @@ export const SKILL_GROUPS: SkillGroup[] = [
       },
       {
         name: 'CI/CD',
-        context: 'Automated build, testing, and deployment workflows for reliable delivery',
+        context: 'Automated data ingestion, build, testing, and deployment pipelines',
         focusTag: 'Automation',
       },
       {
         name: 'Streamlit',
-        context: 'Interactive data and AI copilot interfaces for rapid analytical workflows',
+        context: 'Interactive data and AI copilot interfaces for analytical and human-in-the-loop workflows',
         focusTag: 'Data UI',
       },
       {
         name: 'SQLite',
-        context: 'Lightweight relational database storage for transaction records and audit trails',
+        context: 'Lightweight relational database storage for transaction records and immutable audit trails',
         focusTag: 'Persistence',
       },
     ],
@@ -208,7 +194,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
 
 /**
  * Featured Projects with complete deep-dive case study data.
- * Designed so Mann can easily edit descriptions, architecture nodes, and links as projects evolve.
  */
 export const FEATURED_PROJECTS: ProjectItem[] = [
   {
@@ -286,22 +271,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
       { label: 'LLM Runtime', value: 'Ollama (Local)' },
       { label: 'Governance', value: 'HITL + SQLite Audit' },
     ],
-    screenshotPlaceholders: [
-      {
-        title: 'Risk Dashboard & Anomaly Queue',
-        caption: '[PLACEHOLDER: Add screenshot of Streamlit main transaction risk table and score distribution]',
-        aspectNote: '16:9 Dashboard View',
-      },
-      {
-        title: 'Ollama Copilot Panel & Audit Log',
-        caption: '[PLACEHOLDER: Add screenshot of LLM risk explanation panel and human-in-the-loop approval log]',
-        aspectNote: '16:9 Detail View',
-      },
-    ],
-    githubUrl: 'https://github.com/Mann473/ai-risk-copilot',
-    liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
-    isGithubPlaceholder: true,
-    isLiveDemoPlaceholder: true,
+    githubUrl: 'https://github.com/Mann473',
     accentColor: 'cyan',
   },
   {
@@ -320,13 +290,13 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     solution:
       'Developed a full-stack expense tracking application featuring shared household ledgers, automatic per-member balance calculations, settlement tracking, and a responsive, mobile-first interface built for quick everyday entry.',
     architectureSummary:
-      'Full-stack client-server architecture with responsive mobile UI, RESTful business logic for balance reconciliation, and relational persistence.',
+      'Full-stack client-server architecture with responsive mobile UI, deterministic business logic for balance reconciliation, and relational persistence.',
     architectureFlow: [
       {
         stage: '01 / CLIENT UI',
         title: 'Mobile-First Web Interface',
         description: 'Responsive interface for logging bills, selecting roommates, and viewing household balance summaries.',
-        tech: 'Responsive Frontend UI',
+        tech: 'React / TypeScript UI',
       },
       {
         stage: '02 / SPLIT ENGINE',
@@ -343,10 +313,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     ],
     technologies: [
       'Full-Stack Architecture',
+      'React / TypeScript',
       'SQL / Relational DB',
-      'Responsive Web UI',
       'Balance Calculation Engine',
-      'Mobile-First Design',
+      'Mobile-First UI',
     ],
     keyFeatures: [
       'Shared household expense logging with categories, dates, and payer attribution.',
@@ -372,41 +342,26 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
       { label: 'Core Engine', value: 'Auto-Balance Split' },
       { label: 'UX Focus', value: 'Mobile-Friendly UI' },
     ],
-    screenshotPlaceholders: [
-      {
-        title: 'Household Dashboard & Balance Summary',
-        caption: '[PLACEHOLDER: Add screenshot of household overview and roommate net balance cards]',
-        aspectNote: 'Desktop & Mobile View',
-      },
-      {
-        title: 'Add Expense & Split Breakdown Modal',
-        caption: '[PLACEHOLDER: Add screenshot of expense entry form and automatic split calculation]',
-        aspectNote: 'Mobile Responsive View',
-      },
-    ],
-    githubUrl: 'https://github.com/Mann473/household-expense-splitter',
-    liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
-    isGithubPlaceholder: true,
-    isLiveDemoPlaceholder: true,
+    githubUrl: 'https://github.com/Mann473',
     accentColor: 'blue',
   },
   {
     id: 'jarvis-voice-assistant',
     slug: 'jarvis-voice-assistant',
     title: 'Jarvis Voice Assistant',
-    subtitle: 'Python Desktop Automation & Speech-Driven Personal Assistant',
+    subtitle: 'Voice-Activated Personal Assistant for Desktop & Mobile Task Automation',
     category: 'Automation',
     featuredBadge: 'Voice & Automation',
     shortDescription:
-      'A Python-based personal voice assistant utilizing speech recognition and text-to-speech synthesis to execute hands-free voice commands and automate everyday desktop tasks.',
+      'A personal voice and workflow assistant using Python, SpeechRecognition, NLP, and Text-to-Speech synthesis to execute hands-free commands and automate routine computer and device tasks.',
     overview:
-      'Jarvis Voice Assistant is a desktop automation system written in Python that listens for natural voice commands, processes user intent, executes system-level or web actions, and responds audibly via text-to-speech. It was built to explore human-computer interaction, audio processing pipelines, and practical desktop task automation.',
+      'Jarvis Voice Assistant is an automation system built with Python and speech recognition libraries to automate routine tasks, interpret commands via Natural Language Processing (NLP), read PDFs aloud, retrieve weather updates, capture photos, manage system processes, and execute guarded multi-step workflows.',
     problemStatement:
-      'Routine desktop tasks—such as launching applications, querying quick information, checking system status, or executing repetitive workflows—require constant context switching and manual navigation.',
+      'Routine computer and device tasks—such as launching applications, reading documents, managing files/processes, or executing repetitive multi-step workflows—require constant context switching and manual navigation.',
     solution:
-      'Engineered a modular Python voice assistant combining real-time speech-to-text recognition, command routing logic, OS/desktop automation hooks, and natural text-to-speech feedback.',
+      'Engineered a modular voice-activated assistant combining real-time speech-to-text recognition, NLP command parsing, OS/system process automation hooks, and audible Text-to-Speech feedback.',
     architectureSummary:
-      'Event-driven audio loop capturing microphone input, transcribing speech to text, matching command intents, triggering desktop automation routines, and synthesizing spoken responses.',
+      'Event-driven audio and command pipeline capturing voice input, parsing intent with NLP, triggering system/app automation routines with safety checks, and synthesizing spoken responses.',
     architectureFlow: [
       {
         stage: '01 / AUDIO INPUT',
@@ -415,59 +370,50 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         tech: 'Python • SpeechRecognition',
       },
       {
-        stage: '02 / INTENT PARSER',
-        title: 'Command Router & Dispatcher',
-        description: 'Maps recognized text commands to registered desktop automation handlers and query modules.',
-        tech: 'Python Command Engine',
+        stage: '02 / NLP INTENT',
+        title: 'NLP Command Parser & Router',
+        description: 'Interprets natural language commands and maps them to system utilities, PDF readers, weather lookups, or app workflows.',
+        tech: 'Python • NLP',
       },
       {
         stage: '03 / EXECUTION & TTS',
-        title: 'Desktop Automation & Voice Output',
-        description: 'Executes OS/application actions and delivers audible confirmation via Text-to-Speech synthesis.',
-        tech: 'OS Automation • TTS Engine',
+        title: 'System Automation & Voice Output',
+        description: 'Executes file management, process control, and application handling with audible Text-to-Speech confirmation.',
+        tech: 'System Automation • TTS',
       },
     ],
     technologies: [
       'Python',
       'Speech Recognition',
+      'Natural Language Processing (NLP)',
       'Text-to-Speech (TTS)',
       'Voice Commands',
       'Desktop Automation',
     ],
     keyFeatures: [
-      'Real-time voice command recognition with ambient background noise adjustment.',
-      'Text-to-Speech (TTS) audio responses for conversational, hands-free feedback.',
-      'Automated execution of everyday computer tasks (launching apps, system utilities, web lookups).',
-      'Extensible command registry making it simple to add new voice triggers and automation scripts.',
+      'Real-time voice command recognition and Natural Language Processing (NLP) intent parsing.',
+      'Text-to-Speech (TTS) audio synthesis capable of reading PDFs aloud and delivering conversational status updates.',
+      'System process automation for hands-free file management, process control, weather retrieval, photo capture, and app launching.',
+      'Guarded workflow execution with explicit state verification and emergency stop controls.',
     ],
     challengesAndImplementation: [
       {
-        title: 'Reducing Latency & Handling Misrecognized Audio',
+        title: 'Reliable Command Interpretation & Noise Calibration',
         detail:
-          'Implemented dynamic energy threshold calibration and graceful fallback prompts so the assistant recovers cleanly when background noise or unclear audio occurs.',
+          'Implemented dynamic energy threshold calibration and structured NLP keyword/intent matching so spoken commands route accurately even with ambient background noise.',
       },
       {
-        title: 'Modular Command Dispatch Architecture',
+        title: 'Safe System & Workflow Execution',
         detail:
-          'Separated speech I/O from task execution handlers so new desktop automation skills can be added without modifying the core audio listening loop.',
+          'Separated speech I/O from system process handlers and added explicit state validation checks to prevent unintended actions when automating external applications.',
       },
     ],
     metricsOrHighlights: [
-      { label: 'Interface', value: 'Speech-to-Text + TTS' },
+      { label: 'Interface', value: 'Speech + NLP + TTS' },
       { label: 'Core Language', value: 'Python' },
-      { label: 'Domain', value: 'Desktop Automation' },
+      { label: 'Domain', value: 'System Automation' },
     ],
-    screenshotPlaceholders: [
-      {
-        title: 'CLI / Assistant Command Execution Log',
-        caption: '[PLACEHOLDER: Add screenshot of Jarvis terminal output showing recognized voice commands and task execution]',
-        aspectNote: 'Terminal / Desktop View',
-      },
-    ],
-    githubUrl: 'https://github.com/Mann473/jarvis-voice-assistant',
-    liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
-    isGithubPlaceholder: true,
-    isLiveDemoPlaceholder: true,
+    githubUrl: 'https://github.com/Mann473',
     accentColor: 'violet',
   },
   {
@@ -478,33 +424,33 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     category: 'AI & ML',
     featuredBadge: 'ML + MLOps Pipeline',
     shortDescription:
-      'A containerized machine learning recommendation engine combining Collaborative Filtering and Content-Based Filtering in Python, packaged with Docker and automated CI/CD workflows.',
+      'An e-commerce recommendation engine built in Python using Collaborative Filtering and Content-Based Filtering, featuring automated data ingestion and deployment via Docker and CI/CD pipelines.',
     overview:
-      'This project implements a personalized product recommendation system designed for e-commerce catalogs. By combining user-item interaction patterns (Collaborative Filtering) with product metadata and attribute similarity (Content-Based Filtering), the system generates relevant product suggestions while using Docker and CI/CD pipelines for reproducible deployment.',
+      'Developed an e-commerce platform with a personalized recommendation engine using Python and machine learning algorithms (collaborative filtering and content-based filtering) to enhance user engagement. Automated data ingestion and model deployment processes with CI/CD pipelines and Docker to improve scalability and reliability.',
     problemStatement:
-      'E-commerce platforms with large product catalogs suffer from discovery friction. Relying solely on popularity rankings misses individual user preferences, while uncontainerized ML scripts are difficult to test and deploy consistently.',
+      'E-commerce platforms with large product catalogs suffer from discovery friction. Relying solely on static rankings misses individual user behavior, while manual data ingestion and uncontainerized ML scripts limit scalability and deployment reliability.',
     solution:
-      'Built a dual-strategy recommendation engine in Python supporting both collaborative and content-based filtering, containerized the service with Docker, and integrated CI/CD automation for repeatable builds and validation.',
+      'Designed a predictive recommendation model in Python that suggests products based on user behavior using both collaborative and content-based filtering, and automated data ingestion and deployment with Docker and CI/CD pipelines.',
     architectureSummary:
-      'Hybrid recommendation pipeline computing user-item similarity matrices and product content vectors, packaged inside a Docker container with automated CI/CD verification.',
+      'Hybrid recommendation pipeline computing user-behavior similarity and product content vectors, packaged inside Docker containers with automated CI/CD ingestion and deployment.',
     architectureFlow: [
       {
-        stage: '01 / DATA & FEATURES',
-        title: 'Interaction & Catalog Preprocessing',
-        description: 'Processes user ratings/interactions alongside product metadata and feature vectors.',
-        tech: 'Python • Data Pipeline',
+        stage: '01 / DATA INGESTION',
+        title: 'Automated Ingestion Pipeline',
+        description: 'Ingests and preprocesses user interaction behavior alongside product catalog attributes.',
+        tech: 'Python • Pandas • NumPy',
       },
       {
         stage: '02 / HYBRID ENGINE',
         title: 'Collaborative + Content Filtering',
-        description: 'Computes user/item neighborhood similarity and content cosine similarity to rank top-N recommendations.',
-        tech: 'Collaborative & Content-Based ML',
+        description: 'Computes user-behavior similarity and content similarity to generate personalized top-N product suggestions.',
+        tech: 'Scikit-learn • ML Algorithms',
       },
       {
         stage: '03 / DELIVERY & OPS',
-        title: 'Docker & CI/CD Pipeline',
-        description: 'Packages dependencies into a reproducible Docker image with automated CI/CD build and test checks.',
-        tech: 'Docker • CI/CD',
+        title: 'Docker & CI/CD Deployment',
+        description: 'Packages the predictive model into reproducible Docker containers with automated CI/CD build and deployment workflows.',
+        tech: 'Docker • CI/CD Pipelines',
       },
     ],
     technologies: [
@@ -513,161 +459,130 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
       'Content-Based Filtering',
       'Docker',
       'CI/CD',
-      'Machine Learning',
+      'Scikit-learn',
     ],
     keyFeatures: [
-      'Collaborative Filtering module leveraging user-item interaction histories to uncover shared taste patterns.',
-      'Content-Based Filtering module matching product attributes and descriptions to mitigate cold-start items.',
-      'Docker containerization ensuring consistent Python runtime and ML dependency environments.',
-      'CI/CD pipeline integration automating testing and container builds on code changes.',
+      'Collaborative Filtering module leveraging user behavior and interaction histories to uncover shared preference patterns.',
+      'Content-Based Filtering module matching product attributes to mitigate cold-start items.',
+      'Automated data ingestion and model deployment workflows orchestrated through CI/CD pipelines.',
+      'Docker containerization ensuring scalable, reproducible runtime environments.',
     ],
     challengesAndImplementation: [
       {
-        title: 'Addressing Cold-Start & Sparsity in User Matrices',
+        title: 'Combining Collaborative & Content-Based Signals',
         detail:
-          'Combined collaborative filtering with content-based similarity so products with limited interaction history can still be recommended based on catalog attributes.',
+          'Blended user-behavior collaborative filtering with content-based attribute matching so both returning users and newly added catalog items receive relevant recommendations.',
       },
       {
-        title: 'Reproducible ML Packaging with Docker & CI/CD',
+        title: 'Automating Ingestion & Deployment with Docker & CI/CD',
         detail:
-          'Configured Dockerfiles and automated CI checks to eliminate environment drift between local model experimentation and containerized execution.',
+          'Containerized the Python ML environment with Docker and automated ingestion/deployment checks via CI/CD pipelines to eliminate environment drift.',
       },
     ],
     metricsOrHighlights: [
       { label: 'Algorithms', value: 'Collaborative + Content' },
       { label: 'Infrastructure', value: 'Docker Containerized' },
-      { label: 'Automation', value: 'CI/CD Integrated' },
+      { label: 'Automation', value: 'CI/CD Pipelines' },
     ],
-    screenshotPlaceholders: [
-      {
-        title: 'Recommendation Output & Similarity Ranking',
-        caption: '[PLACEHOLDER: Add screenshot of personalized product recommendations and similarity scores]',
-        aspectNote: 'Application / Notebook View',
-      },
-      {
-        title: 'Docker & CI/CD Pipeline Execution',
-        caption: '[PLACEHOLDER: Add screenshot of successful CI/CD workflow run and Docker build]',
-        aspectNote: 'Pipeline View',
-      },
-    ],
-    githubUrl: 'https://github.com/Mann473/ecommerce-recommendation-system',
-    liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
-    isGithubPlaceholder: true,
-    isLiveDemoPlaceholder: true,
+    githubUrl: 'https://github.com/Mann473',
     accentColor: 'emerald',
   },
   {
     id: 'cats-vs-dogs-classification',
     slug: 'cats-vs-dogs-image-classification',
     title: 'Cats vs Dogs Image Classification',
-    subtitle: 'Deep Learning Computer Vision with CNNs & VGG16 Transfer Learning (~97% Accuracy)',
+    subtitle: 'Deep Learning Computer Vision with CNNs, VGG16 & ResNet (97% Accuracy)',
     category: 'AI & ML',
-    featuredBadge: '~97% Accuracy • 20k+ Images',
+    featuredBadge: '97% Accuracy • 20k+ Images',
     shortDescription:
-      'A deep learning computer vision project trained on 20,000+ images using TensorFlow, custom Convolutional Neural Networks (CNNs), and VGG16 transfer learning—achieving approximately 97% classification accuracy.',
+      'A deep learning computer vision model trained on the Microsoft Cats vs. Dogs Dataset (20,000+ images) using custom CNNs and transfer learning (VGG16, ResNet)—achieving 97% classification accuracy.',
     overview:
-      'This computer vision project explores binary image classification at scale using a dataset of over 20,000 labeled images of cats and dogs. Developed in Python with TensorFlow, the project compares custom CNN architectures against transfer learning with VGG16, utilizing data augmentation and fine-tuning to achieve approximately 97% validation accuracy in the original project.',
+      'Built an image classification model in Python (TensorFlow/Keras) to distinguish between images of cats and dogs using Convolutional Neural Networks (CNNs). Preprocessed and augmented the Microsoft Cats vs. Dogs Dataset (20,000+ images) and experimented with custom CNN architectures alongside transfer learning models (VGG16, ResNet), optimizing with Dropout, Batch Normalization, and Hyperparameter Tuning to achieve 97% accuracy.',
     problemStatement:
-      'Classifying real-world animal imagery involves significant intra-class variation in lighting, pose, background clutter, and occlusion, requiring robust convolutional feature extraction and regularization to prevent overfitting.',
+      'Classifying real-world animal imagery across 20,000+ samples involves significant variation in lighting, pose, scale, and background clutter, requiring robust spatial feature extraction and regularization to prevent overfitting.',
     solution:
-      'Implemented an end-to-end deep learning training pipeline in Python and TensorFlow across 20,000+ images, leveraging image preprocessing, real-time data augmentation, custom CNN layers, and VGG16 transfer learning to reach ~97% accuracy.',
+      'Implemented a comprehensive preprocessing and augmentation pipeline (resizing, normalization, rotation, flipping, zooming) and trained custom CNNs and transfer learning backbones (VGG16, ResNet) optimized with Dropout, Batch Normalization, and hyperparameter tuning to reach 97% accuracy.',
     architectureSummary:
-      'End-to-end TensorFlow computer vision pipeline featuring image normalization, augmentation, VGG16 convolutional feature extraction, and dense classification heads.',
+      'End-to-end TensorFlow/Keras computer vision pipeline featuring Microsoft 20k+ dataset augmentation, VGG16/ResNet transfer learning backbones, and regularized dense classification heads.',
     architectureFlow: [
       {
         stage: '01 / DATASET (20,000+)',
-        title: 'Image Ingestion & Augmentation',
-        description: 'Resizes, normalizes, and applies random flips, rotations, and zoom across 20,000+ training and validation images.',
-        tech: 'Python • TensorFlow Data',
+        title: 'Preprocessing & Augmentation',
+        description: 'Resizes, normalizes, and applies rotation, flipping, and zooming across 20,000+ images from the Microsoft Cats vs. Dogs Dataset.',
+        tech: 'Python • OpenCV • TensorFlow',
       },
       {
         stage: '02 / BACKBONE',
-        title: 'CNN & VGG16 Feature Extraction',
-        description: 'Extracts hierarchical spatial features using convolutional blocks and pre-trained VGG16 convolutional weights.',
-        tech: 'CNN • VGG16 Transfer Learning',
+        title: 'Custom CNN, VGG16 & ResNet',
+        description: 'Extracts hierarchical spatial features comparing custom CNN layers against VGG16 and ResNet transfer learning models.',
+        tech: 'CNN • VGG16 • ResNet',
       },
       {
-        stage: '03 / CLASSIFIER',
-        title: 'Dense Head & Evaluation (~97% Acc)',
-        description: 'Regularized fully connected layers with sigmoid activation achieving ~97% classification accuracy.',
-        tech: 'TensorFlow / Keras',
+        stage: '03 / OPTIMIZATION',
+        title: 'Regularization & Tuning (97% Acc)',
+        description: 'Applies Dropout, Batch Normalization, and hyperparameter tuning to prevent overfitting and achieve 97% accuracy.',
+        tech: 'Keras • Batch Norm • Dropout',
       },
     ],
     technologies: [
       'Python',
-      'TensorFlow / Deep Learning',
+      'TensorFlow / Keras',
       'CNN',
-      'VGG16',
+      'VGG16 & ResNet',
+      'OpenCV',
       'Image Classification',
     ],
     keyFeatures: [
-      'Trained and evaluated on a large-scale dataset containing 20,000+ images.',
-      'Achieved approximately 97% classification accuracy in the original project using VGG16 transfer learning.',
-      'Implemented image preprocessing and data augmentation to improve model generalization.',
-      'Compared baseline custom Convolutional Neural Network (CNN) performance against VGG16 feature extraction.',
+      'Preprocessed and augmented the Microsoft Cats vs. Dogs Dataset (20,000+ images) using resizing, normalization, rotation, flipping, and zooming.',
+      'Experimented with custom CNN architectures and transfer learning models (VGG16, ResNet) to achieve 97% classification accuracy.',
+      'Optimized model generalization using Dropout, Batch Normalization, and systematic Hyperparameter Tuning.',
     ],
     challengesAndImplementation: [
       {
-        title: 'Mitigating Overfitting on High-Dimensional Image Data',
+        title: 'Preventing Overfitting on 20,000+ High-Variance Images',
         detail:
-          'Applied image augmentation techniques and dropout regularization while freezing base VGG16 convolutional layers before fine-tuning the classification head.',
+          'Combined geometric data augmentation (rotation, flipping, zooming) with Dropout and Batch Normalization layers to stabilize training gradients and maximize validation accuracy.',
       },
       {
-        title: 'Efficient Batch Loading for 20,000+ Images',
+        title: 'Benchmarking Custom CNNs vs. Transfer Learning (VGG16 / ResNet)',
         detail:
-          'Structured batched image generators in TensorFlow to stream and transform images efficiently without exhausting system memory during multi-epoch training.',
+          'Evaluated custom convolutional blocks against pre-trained VGG16 and ResNet feature extractors, fine-tuning hyperparameters to reach 97% accuracy.',
       },
     ],
     metricsOrHighlights: [
       { label: 'Dataset Scale', value: '20,000+ Images' },
-      { label: 'Model Accuracy', value: '~97% Accuracy' },
-      { label: 'Architecture', value: 'CNN + VGG16' },
+      { label: 'Model Accuracy', value: '97% Accuracy' },
+      { label: 'Architectures', value: 'CNN • VGG16 • ResNet' },
     ],
-    screenshotPlaceholders: [
-      {
-        title: 'Training Accuracy & Loss Curves',
-        caption: '[PLACEHOLDER: Add plot of TensorFlow training vs. validation accuracy (~97%) and loss curves]',
-        aspectNote: 'Metrics Plot',
-      },
-      {
-        title: 'Sample Predictions & Confusion Matrix',
-        caption: '[PLACEHOLDER: Add grid of test image predictions with confidence scores]',
-        aspectNote: 'Evaluation Grid',
-      },
-    ],
-    githubUrl: 'https://github.com/Mann473/cats-vs-dogs-cnn-vgg16',
-    liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
-    isGithubPlaceholder: true,
-    isLiveDemoPlaceholder: true,
+    githubUrl: 'https://github.com/Mann473',
     accentColor: 'amber',
   },
 ];
 
 /**
  * Professional Experience Timeline at Best Buy Canada.
- * Highlights leadership, communication, team development, problem-solving, and operational responsibility.
- * Dates are clearly marked as placeholders so no employment dates are fabricated.
  */
 export const EXPERIENCE_TIMELINE: ExperienceRole[] = [
   {
-    id: 'bby-sales-associate',
-    role: 'Sales Associate',
+    id: 'bby-assistant-store-manager',
+    role: 'Assistant Store Manager',
     company: 'Best Buy Canada',
-    location: 'Canada',
-    periodPlaceholder: '[PLACEHOLDER: Insert Start Date – Present / End Date]',
-    isPlaceholderDate: true,
+    departmentOrNote: 'Mobile Department Leadership',
+    location: 'St. Catharines, ON',
+    period: 'November 2025 – Present',
     summary:
-      'Deliver consultative technology solutions by translating complex hardware, software, and connectivity specifications into clear, practical recommendations tailored to customer needs.',
+      'Oversee daily operations for the mobile department, including opening and closing procedures, cash handling, securing high-value inventory, and collaborating with the sales team to meet daily targets.',
     transferableSkills: [
+      'Leadership',
+      'Operational Responsibility',
+      'Team Development',
+      'Problem-Solving',
       'Customer Communication',
-      'Technical Problem-Solving',
-      'Needs Analysis',
-      'Cross-Team Collaboration',
     ],
     highlights: [
-      'Communicate complex technical concepts clearly to non-technical customers, directly paralleling stakeholder communication in software engineering.',
-      'Diagnose customer requirements and troubleshoot device, software, and ecosystem compatibility questions in fast-paced environments.',
-      'Collaborate with team members across departments to maintain smooth floor operations and high customer satisfaction.',
+      'Oversee daily operations for the mobile department, including opening and closing procedures, cash handling, and securing high-value mobile inventory.',
+      'Collaborate with and coach the sales team to meet daily operational and sales targets while maintaining high service standards.',
+      'Provide technical product expertise on smartphones, tablets, and connectivity ecosystems to resolve complex customer inquiries.',
     ],
   },
   {
@@ -675,11 +590,10 @@ export const EXPERIENCE_TIMELINE: ExperienceRole[] = [
     role: 'Keyholder, Best Buy Mobile',
     company: 'Best Buy Canada',
     departmentOrNote: 'Best Buy Mobile',
-    location: 'Canada',
-    periodPlaceholder: '[PLACEHOLDER: Insert Start Date – End Date]',
-    isPlaceholderDate: true,
+    location: 'St. Catharines, ON',
+    period: 'Best Buy Mobile Operations',
     summary:
-      'Entrusted with keyholder operational responsibility, store opening/closing procedures, escalations, and guiding mobile team workflows in a high-accountability environment.',
+      'Entrusted with keyholder operational responsibility, store opening/closing governance, customer escalations, and guiding mobile department workflows in a high-accountability environment.',
     transferableSkills: [
       'Operational Responsibility',
       'Leadership',
@@ -693,47 +607,47 @@ export const EXPERIENCE_TIMELINE: ExperienceRole[] = [
     ],
   },
   {
-    id: 'bby-assistant-store-manager',
-    role: 'Assistant Store Manager',
+    id: 'bby-sales-associate',
+    role: 'Sales Associate',
     company: 'Best Buy Canada',
-    departmentOrNote: 'Previous Role',
-    location: 'Canada',
-    periodPlaceholder: '[PLACEHOLDER: Insert Start Date – End Date]',
-    isPlaceholderDate: true,
+    location: 'St. Catharines, ON',
+    period: 'Client & Technical Advisory',
     summary:
-      'Provided store-level leadership, team coaching, and operational oversight—driving daily execution, staff development, and customer service excellence.',
+      'Delivered consultative technology solutions by translating complex hardware, software, and mobile specifications into clear, practical recommendations tailored to customer needs.',
     transferableSkills: [
-      'Leadership',
-      'Team Development',
-      'Operational Management',
-      'Strategic Problem-Solving',
+      'Customer Communication',
+      'Technical Problem-Solving',
+      'Needs Analysis',
+      'Cross-Team Collaboration',
     ],
     highlights: [
-      'Led and developed team members through active coaching, onboarding support, and constructive performance feedback.',
-      'Managed day-to-day store operations, resource allocation, and workflow prioritization to keep teams aligned and productive.',
-      'Resolved high-priority operational and customer escalations with composure, accountability, and structured decision-making.',
+      'Communicated complex technical concepts clearly to non-technical customers, directly paralleling stakeholder communication in software engineering.',
+      'Diagnosed customer requirements and troubleshot device, software, and ecosystem compatibility questions in fast-paced environments.',
+      'Collaborated with team members across departments to maintain smooth floor operations and high customer satisfaction.',
     ],
   },
 ];
 
 export const EDUCATION_DATA: EducationInfo = {
   institution: 'Brock University',
-  degree: 'Bachelor of Computer Science',
-  location: 'Ontario, Canada',
-  graduationDatePlaceholder: '[PLACEHOLDER: Insert Graduation Year / Date]',
-  isPlaceholderDate: true,
+  degree: 'Bachelor of Computer Science (B.Sc. Honors)',
+  minors: 'Minors in Business and Management',
+  location: 'St. Catharines, ON, Canada',
+  graduationDate: 'June 2025 (Jan 2022 – April 2025)',
   summary:
-    'Completed comprehensive undergraduate studies in Computer Science at Brock University, building a strong academic foundation in software engineering, algorithms, data structures, databases, and artificial intelligence.',
+    'Completed an Honors Bachelor of Science in Computer Science with Minors in Business and Management at Brock University, building a strong foundation in software engineering, algorithms, advanced data structures, database management systems, and machine learning.',
   focusAreas: [
-    'Software Engineering & Object-Oriented Design',
-    'Artificial Intelligence & Machine Learning Foundations',
-    'Data Structures & Algorithmic Problem Solving',
-    'Database Systems & Relational Modeling (SQL)',
+    'Software Engineering & Object-Oriented Programming',
+    'Machine Learning & Artificial Intelligence',
+    'Algorithms & Advanced Data Structures',
+    'Database Management Systems (DBMS) & Network Security',
   ],
-  courseworkPlaceholders: [
-    '[PLACEHOLDER: Add key Brock University CS course #1, e.g., Artificial Intelligence / Machine Learning]',
-    '[PLACEHOLDER: Add key Brock University CS course #2, e.g., Data Structures & Algorithms]',
-    '[PLACEHOLDER: Add key Brock University CS course #3, e.g., Software Engineering / Database Systems]',
-    '[PLACEHOLDER: Add academic honors, GPA, or capstone note if desired]',
+  relevantCoursework: [
+    'Algorithms & Advanced Data Structures',
+    'Machine Learning',
+    'Software Engineering & Object-Oriented Programming',
+    'DBMS (Database Management Systems)',
+    'Computer Systems & Network Security',
+    'Internet Technologies',
   ],
 };

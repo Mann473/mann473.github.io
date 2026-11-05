@@ -4,11 +4,11 @@ import {
   X,
   FileText,
   Download,
+  ExternalLink,
   GraduationCap,
   Briefcase,
   Code2,
   FolderGit2,
-  AlertTriangle,
 } from 'lucide-react';
 import {
   PERSONAL_INFO,
@@ -72,46 +72,35 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   Mann Patel — Resume Overview &amp; PDF Download
                 </h2>
               </div>
-              <button
-                type="button"
-                onClick={onClose}
-                className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="p-6 sm:p-8 space-y-6">
-              {/* Placeholder instructions banner */}
-              <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                  <div className="text-xs text-amber-100/90 space-y-1">
-                    <p className="font-semibold text-amber-200">
-                      Resume PDF Placeholder Active
-                    </p>
-                    <p>
-                      To enable direct PDF download of your final resume, drop your PDF file
-                      into the <code className="font-mono text-cyan-300">public/</code>{' '}
-                      directory (e.g.,{' '}
-                      <code className="font-mono text-cyan-300">
-                        public/Mann_Patel_Resume.pdf
-                      </code>
-                      ) and update <code className="font-mono text-cyan-300">resumeUrl</code>{' '}
-                      in <code className="font-mono text-cyan-300">src/data/portfolioData.ts</code>.
-                    </p>
-                  </div>
-                </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={PERSONAL_INFO.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-cyan-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-colors"
+                >
+                  <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Open PDF</span>
+                </a>
                 <a
                   href={PERSONAL_INFO.resumeUrl}
                   download="Mann_Patel_Resume.pdf"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 shrink-0 self-start sm:self-center"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 text-slate-950 hover:from-cyan-300 hover:to-blue-300 transition-all"
                 >
-                  <Download className="w-4 h-4" />
-                  <span>Download Placeholder</span>
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download PDF</span>
                 </a>
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
+            </div>
 
+            <div className="p-6 sm:p-8 space-y-6">
               {/* Structured Resume Summary Sheet */}
               <div className="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-6">
                 <div className="border-b border-slate-800 pb-4 flex flex-wrap items-center justify-between gap-4">
@@ -123,9 +112,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                       {PERSONAL_INFO.headline}
                     </p>
                   </div>
-                  <div className="text-xs font-mono text-slate-400 space-y-0.5">
+                  <div className="text-xs font-mono text-slate-400 space-y-0.5 text-right">
                     <p>{EDUCATION_DATA.location}</p>
-                    <p>{PERSONAL_INFO.email} (Placeholder)</p>
+                    <p>{PERSONAL_INFO.email}</p>
+                    <p>{PERSONAL_INFO.linkedinDisplay}</p>
                   </div>
                 </div>
 
@@ -136,11 +126,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                     Education
                   </h4>
                   <div className="flex flex-wrap items-center justify-between text-sm">
-                    <span className="font-semibold text-white">
-                      {EDUCATION_DATA.degree} — {EDUCATION_DATA.institution}
-                    </span>
-                    <span className="font-mono text-xs text-amber-300">
-                      {EDUCATION_DATA.graduationDatePlaceholder}
+                    <div>
+                      <span className="font-semibold text-white block">
+                        {EDUCATION_DATA.degree} — {EDUCATION_DATA.institution}
+                      </span>
+                      <span className="text-xs text-slate-400">
+                        {EDUCATION_DATA.minors}
+                      </span>
+                    </div>
+                    <span className="font-mono text-xs text-cyan-300">
+                      {EDUCATION_DATA.graduationDate}
                     </span>
                   </div>
                 </div>
@@ -208,10 +203,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                           {exp.role}
                         </span>
                         <span className="text-cyan-300 block text-[11px]">
-                          {exp.company}
+                          {exp.company} • {exp.location}
                         </span>
-                        <span className="text-amber-300/90 font-mono text-[10px] block mt-1">
-                          {exp.periodPlaceholder}
+                        <span className="text-slate-400 font-mono text-[10px] block mt-1">
+                          {exp.period}
                         </span>
                       </div>
                     ))}

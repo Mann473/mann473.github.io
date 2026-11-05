@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import {
   ArrowUpRight,
   Github,
-  ExternalLink,
   Layers,
   Cpu,
   ShieldAlert,
@@ -109,7 +108,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <p className="mt-3 text-slate-400 text-base sm:text-lg">
               Click any project card to launch its full architectural deep-dive—complete
               with problem statements, data-flow pipelines, implementation challenges,
-              screenshot slots, and repository links.
+              and key technical specifications.
             </p>
           </div>
 
@@ -285,26 +284,16 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     </div>
 
                     <div className="flex items-center gap-3 text-xs font-mono">
-                      <span
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onSelectProject(project);
-                        }}
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-300 transition-colors"
                       >
                         <Github className="w-3.5 h-3.5" />
-                        <span>Repo</span>
-                      </span>
-                      <span
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onSelectProject(project);
-                        }}
-                        className="inline-flex items-center gap-1 text-slate-400 hover:text-cyan-300 transition-colors"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                        <span>Demo</span>
-                      </span>
+                        <span>GitHub</span>
+                      </a>
                       <span className="inline-flex items-center gap-1 text-cyan-400 font-semibold group-hover:translate-x-0.5 transition-transform">
                         <span>Explore Specs</span>
                         <ChevronRight className="w-4 h-4" />
