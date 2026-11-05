@@ -29,9 +29,9 @@ export const PERSONAL_INFO = {
   email: 'mann.patel@example.com', // [PLACEHOLDER: Replace with your personal email]
   isEmailPlaceholder: true,
 
-  githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME', // [PLACEHOLDER: Replace with your GitHub profile URL]
-  githubDisplay: 'github.com/[YOUR_USERNAME]',
-  isGithubPlaceholder: true,
+  githubUrl: 'https://github.com/Mann473',
+  githubDisplay: 'github.com/Mann473',
+  isGithubPlaceholder: false,
 
   linkedinUrl: 'https://linkedin.com/in/YOUR_LINKEDIN_HANDLE', // [PLACEHOLDER: Replace with your LinkedIn profile URL]
   linkedinDisplay: 'linkedin.com/in/[YOUR_HANDLE]',
@@ -298,7 +298,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         aspectNote: '16:9 Detail View',
       },
     ],
-    githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME/ai-risk-copilot',
+    githubUrl: 'https://github.com/Mann473/ai-risk-copilot',
     liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
     isGithubPlaceholder: true,
     isLiveDemoPlaceholder: true,
@@ -384,7 +384,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         aspectNote: 'Mobile Responsive View',
       },
     ],
-    githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME/household-expense-splitter',
+    githubUrl: 'https://github.com/Mann473/household-expense-splitter',
     liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
     isGithubPlaceholder: true,
     isLiveDemoPlaceholder: true,
@@ -464,7 +464,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         aspectNote: 'Terminal / Desktop View',
       },
     ],
-    githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME/jarvis-voice-assistant',
+    githubUrl: 'https://github.com/Mann473/jarvis-voice-assistant',
     liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
     isGithubPlaceholder: true,
     isLiveDemoPlaceholder: true,
@@ -550,7 +550,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         aspectNote: 'Pipeline View',
       },
     ],
-    githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME/ecommerce-recommendation-system',
+    githubUrl: 'https://github.com/Mann473/ecommerce-recommendation-system',
     liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
     isGithubPlaceholder: true,
     isLiveDemoPlaceholder: true,
@@ -635,7 +635,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         aspectNote: 'Evaluation Grid',
       },
     ],
-    githubUrl: 'https://github.com/YOUR_GITHUB_USERNAME/cats-vs-dogs-cnn-vgg16',
+    githubUrl: 'https://github.com/Mann473/cats-vs-dogs-cnn-vgg16',
     liveDemoUrl: 'https://your-demo-link-placeholder.example.com',
     isGithubPlaceholder: true,
     isLiveDemoPlaceholder: true,
